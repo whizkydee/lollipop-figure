@@ -22,16 +22,24 @@
 
   <script type="text/javascript" charset="utf-8">
     document.addEventListener('DOMContentLoaded', function() {
-      var colors = ["#9C27B0", "#795548", "#FFEB3B", "#F06292", "#FF9801", "#C4CC45"];
-      var color = function() {
-        return colors[Math.floor(Math.random() * colors.length)];
+      var classes = ["purple", "brown", "yellow", "pink", "orange", "lightgreen"];
+
+      var randomClass = function() {
+        return classes[Math.floor(Math.random() * classes.length)];
       };
 
-      var sweet = document.querySelector('.sweet');
+      var sweet = document.querySelector('#sweet');
+      var circle = document.querySelector('.circle');
+
+      sweet.classList.add(randomClass());
 
       sweet.addEventListener('click', function() {
-        this.style.backgroundColor = color();
+        for (var i = 0; i < classes.length; i++) {
+          if (this.classList !== '') this.classList = '';
+          this.classList.add(randomClass());
+        }
       }, false);
+
 
     }, false);
   </script>
