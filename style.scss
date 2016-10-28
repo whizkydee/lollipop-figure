@@ -1,0 +1,105 @@
+@charset "utf-8";
+
+@font-face {
+  font-family: 'CustomAndroid';
+  src: url('CustomAndroid.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+$font: 'CustomAndroid', Arial, Calibri, serif;
+$full: 100%;
+$stickcolor: 'rgb(248, 255, 255) 0%, rgb(204, 204, 204) 59%, rgb(155, 176, 181) 100%';
+
+@mixin stick-background() {
+  background: -webkit-linear-gradient(left, $stickcolor);
+  background: -o-linear-gradient(left, $stickcolor);
+  background: -ms-linear-gradient(left, $stickcolor);
+  background: -moz-linear-gradient(left, $stickcolor);
+  background: linear-gradient(to right, $stickcolor);
+}
+
+@mixin browser-prefix($property, $value) {
+  -webkit-#{$property}: #{$value};
+  -moz-#{$property}:    #{$value};
+  -ms-#{$property}:     #{$value};
+  -o-#{$property}:      #{$value};
+  #{$property}:         #{$value};
+}
+
+* {
+  @include browser-prefix(box-sizing, border-box);
+  &:before,
+  &:after {
+    @include browser-prefix(box-sizing, border-box);
+  }
+}
+
+html,
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: $full;
+  -ms-text-size-adjust: $full;
+  font-family: $font;
+  overflow: hidden;
+  font-size: $full;
+  height: $full;
+  width: $full;
+  clear: both;
+  color: #fff;
+}
+
+body {
+  background: url('background.jpg') #eee no-repeat;
+  @include browser-prefix(background-size, cover);
+  text-align: center;
+  line-height: 1.5;
+  margin: 0 auto;
+  padding: 0;
+}
+
+
+.demo {
+  position: relative;
+}
+
+.figure {
+  position: relative;
+  text-align: center;
+  margin: 0 auto;
+  width: 19%;
+  .sweet {
+    @include browser-prefix(box-shadow, 0px 0px 7px rgba(0, 0, 0, .1));
+    @include browser-prefix(border-radius, $full)
+    background-color: #9C27B0;
+    text-align: center;
+    position: relative;
+    padding: 0 10px;
+    cursor: pointer;
+    margin: 0 auto;
+    height: 180px;
+    width: 186px;
+    .text {
+      transform: translate(-50%, -60%);
+      letter-spacing: .12em;
+      position: absolute;
+      text-align: center;
+      font-weight: bold;
+      font-size: 2em;
+      left: 50%;
+      top: 50%;
+    }
+  }
+
+  .stick {
+    box-shadow: 0px 0px 7px rgba(0, 0, 0, .1);
+    @include stick-background;
+    margin: -5px auto 0;
+    position: relative;
+    text-align: center;
+    height: 250px;
+    z-index: -1;
+    width: 18px;
+  }
+}

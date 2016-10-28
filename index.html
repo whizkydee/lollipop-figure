@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no" />
+  <title>Android Lollipop Easter egg with Pure CSS</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <section class="demo">
+    <div class="main">
+      <h3 class=title>Android Lollipop Easter egg Demo</h3>
+      <div class="figure">
+        <div class="sweet"><div class="text"><span>lollipop</span></div></div>
+        <div class="stick"></div>
+      </div>
+    </div>
+  </section>
+
+  <script type="text/javascript" charset="utf-8">
+    document.addEventListener('DOMContentLoaded', function() {
+      var colors = ["#9C27B0", "#795548", "#FFEB3B", "#F06292", "#FF9801", "#C4CC45"];
+      var color = function() {
+        return colors[Math.floor(Math.random() * colors.length)];
+      };
+
+      var sweet = document.querySelector('.sweet');
+
+      sweet.addEventListener('click', function() {
+        this.style.backgroundColor = color();
+      }, false);
+
+    }, false);
+  </script>
+</body>
+</html>
