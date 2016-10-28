@@ -7,9 +7,25 @@
   font-style: normal;
 }
 
+$stickcolor: unquote('rgb(248, 255, 255) 0%, rgb(204, 204, 204) 59%, rgb(155, 176, 181) 100%');
 $font: 'CustomAndroid', Arial, Calibri, serif;
 $full: 100%;
-$stickcolor: unquote('rgb(248, 255, 255) 0%, rgb(204, 204, 204) 59%, rgb(155, 176, 181) 100%');
+
+// Sweet Colors
+$purple:              #9C28B1;
+$brown:               #795547;
+$yellow:              #FAE636;
+$pink:                #F06292;
+$orange:              #FF9801;
+$lightgreen:          #C4CC45;
+
+// Circles
+$purple-circle:       #A235B6;
+$brown-circle:        #826054;
+$yellow-circle:       #FDEE3E;
+$pink-circle:         #F96B9B;
+$orange-circle:       #FFA316;
+$lightgreen-circle:   #CBD34C;
 
 @mixin stick-background() {
   background: -webkit-linear-gradient(left, $stickcolor);
@@ -51,7 +67,7 @@ body {
 }
 
 body {
-  background: url('background.jpg') #eee no-repeat;
+  background: url('background.jpg') #eeeeee no-repeat;
   @include browser-prefix(background-size, cover);
   text-align: center;
   line-height: 1.5;
@@ -67,12 +83,12 @@ body {
 .figure {
   position: relative;
   text-align: center;
-  margin: 0 auto;
+  margin: 200px auto;
   width: 19%;
-  .sweet {
-    @include browser-prefix(box-shadow, 0px 0px 7px rgba(0, 0, 0, .1));
-    @include browser-prefix(border-radius, $full)
-    background-color: #9C27B0;
+  #sweet {
+    @include browser-prefix(box-shadow, '0px 0px 17px rgba(0, 0, 0, .4)');
+    @include browser-prefix(transition, 'background-color .1s ease');
+    @include browser-prefix(border-radius, $full);
     text-align: center;
     position: relative;
     padding: 0 10px;
@@ -80,20 +96,71 @@ body {
     margin: 0 auto;
     height: 180px;
     width: 186px;
+    .circle {
+      @include browser-prefix(border-radius, $full);
+      position: absolute;
+      height: 85px;
+      width: 85px;
+      left: 28px;
+      top: 23px;
+    }
+
+    &.purple {
+      background-color: $purple;
+      .circle {
+        background-color: $purple-circle;
+      }
+    }
+
+    &.brown {
+      background-color: $brown;
+      .circle {
+        background-color: $brown-circle;
+      }
+    }
+
+    &.yellow {
+      background-color: $yellow;
+      .circle {
+        background-color: $yellow-circle;
+      }
+    }
+
+    &.pink {
+      background-color: $pink;
+      .circle {
+        background-color: $pink-circle;
+      }
+    }
+
+    &.orange {
+      background-color: $orange;
+      .circle {
+        background-color: $orange-circle;
+      }
+    }
+
+    &.lightgreen {
+      background-color: $lightgreen;
+      .circle {
+        background-color: $lightgreen-circle;
+      }
+    }
+
     .text {
-      transform: translate(-50%, -60%);
-      letter-spacing: .12em;
+      @include browser-prefix(transform, 'translate(-50%, -50%)');
+      letter-spacing: .05em;
       position: absolute;
       text-align: center;
       font-weight: bold;
-      font-size: 2em;
+      font-size: 2.3em;
       left: 50%;
       top: 50%;
     }
   }
 
   .stick {
-    box-shadow: 0px 0px 7px rgba(0, 0, 0, .1);
+    @include browser-prefix(box-shadow, '0px 0px 17px rgba(0, 0, 0, .3)');
     @include stick-background;
     margin: -5px auto 0;
     position: relative;

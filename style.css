@@ -7,11 +7,13 @@
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
   box-sizing: border-box; }
   *:before, *:after {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     -ms-box-sizing: border-box;
+    -o-box-sizing: border-box;
     box-sizing: border-box; }
 
 html,
@@ -29,9 +31,11 @@ body {
   color: #fff; }
 
 body {
-  background: url("background.jpg") #eee no-repeat;
+  background: url("background.jpg") #eeeeee no-repeat;
   -webkit-background-size: cover;
   -moz-background-size: cover;
+  -ms-background-size: cover;
+  -o-background-size: cover;
   background-size: cover;
   text-align: center;
   line-height: 1.5;
@@ -44,38 +48,90 @@ body {
 .figure {
   position: relative;
   text-align: center;
-  margin: 0 auto;
+  margin: 200px auto;
   width: 19%; }
-  .figure .sweet {
-    box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.1);
+  .figure #sweet {
+    -webkit-box-shadow: 0px 0px 17px rgba(0, 0, 0, .4);
+    -moz-box-shadow: 0px 0px 17px rgba(0, 0, 0, .4);
+    -ms-box-shadow: 0px 0px 17px rgba(0, 0, 0, .4);
+    -o-box-shadow: 0px 0px 17px rgba(0, 0, 0, .4);
+    box-shadow: 0px 0px 17px rgba(0, 0, 0, .4);
+    -webkit-transition: background-color .1s ease;
+    -moz-transition: background-color .1s ease;
+    -ms-transition: background-color .1s ease;
+    -o-transition: background-color .1s ease;
+    transition: background-color .1s ease;
     -webkit-border-radius: 100%;
     -moz-border-radius: 100%;
     -ms-border-radius: 100%;
     -o-border-radius: 100%;
     border-radius: 100%;
-    background-color: #9C27B0;
     text-align: center;
     position: relative;
-    margin: 0 auto;
     padding: 0 10px;
+    cursor: pointer;
+    margin: 0 auto;
     height: 180px;
     width: 186px; }
-    .figure .sweet .text {
-      transform: translate(-50%, -60%);
-      letter-spacing: .12em;
+    .figure #sweet .circle {
+      -webkit-border-radius: 100%;
+      -moz-border-radius: 100%;
+      -ms-border-radius: 100%;
+      -o-border-radius: 100%;
+      border-radius: 100%;
+      position: absolute;
+      height: 85px;
+      width: 85px;
+      left: 28px;
+      top: 23px; }
+    .figure #sweet.purple {
+      background-color: #9C28B1; }
+      .figure #sweet.purple .circle {
+        background-color: #A235B6; }
+    .figure #sweet.brown {
+      background-color: #795547; }
+      .figure #sweet.brown .circle {
+        background-color: #826054; }
+    .figure #sweet.yellow {
+      background-color: #FAE636; }
+      .figure #sweet.yellow .circle {
+        background-color: #FDEE3E; }
+    .figure #sweet.pink {
+      background-color: #F06292; }
+      .figure #sweet.pink .circle {
+        background-color: #F96B9B; }
+    .figure #sweet.orange {
+      background-color: #FF9801; }
+      .figure #sweet.orange .circle {
+        background-color: #FFA316; }
+    .figure #sweet.lightgreen {
+      background-color: #C4CC45; }
+      .figure #sweet.lightgreen .circle {
+        background-color: #CBD34C; }
+    .figure #sweet .text {
+      -webkit-transform: translate(-50%, -50%);
+      -moz-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+      -o-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+      letter-spacing: .05em;
       position: absolute;
       text-align: center;
       font-weight: bold;
-      font-size: 2em;
+      font-size: 2.3em;
       left: 50%;
       top: 50%; }
   .figure .stick {
-    box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.1);
-    background: -webkit-linear-gradient(left, #f8ffff 0%, #cccccc 59%, #9bb0b5 100%);
-    background: -o-linear-gradient(left, #f8ffff 0%, #cccccc 59%, #9bb0b5 100%);
-    background: -ms-linear-gradient(left, #f8ffff 0%, #cccccc 59%, #9bb0b5 100%);
-    background: -moz-linear-gradient(left, #f8ffff 0%, #cccccc 59%, #9bb0b5 100%);
-    background: linear-gradient(to right, #f8ffff 0%, #cccccc 59%, #9bb0b5 100%);
+    -webkit-box-shadow: 0px 0px 17px rgba(0, 0, 0, .3);
+    -moz-box-shadow: 0px 0px 17px rgba(0, 0, 0, .3);
+    -ms-box-shadow: 0px 0px 17px rgba(0, 0, 0, .3);
+    -o-box-shadow: 0px 0px 17px rgba(0, 0, 0, .3);
+    box-shadow: 0px 0px 17px rgba(0, 0, 0, .3);
+    background: -webkit-linear-gradient(left, rgb(248, 255, 255) 0%, rgb(204, 204, 204) 59%, rgb(155, 176, 181) 100%);
+    background: -o-linear-gradient(left, rgb(248, 255, 255) 0%, rgb(204, 204, 204) 59%, rgb(155, 176, 181) 100%);
+    background: -ms-linear-gradient(left, rgb(248, 255, 255) 0%, rgb(204, 204, 204) 59%, rgb(155, 176, 181) 100%);
+    background: -moz-linear-gradient(left, rgb(248, 255, 255) 0%, rgb(204, 204, 204) 59%, rgb(155, 176, 181) 100%);
+    background: linear-gradient(to right, rgb(248, 255, 255) 0%, rgb(204, 204, 204) 59%, rgb(155, 176, 181) 100%);
     margin: -5px auto 0;
     position: relative;
     text-align: center;
