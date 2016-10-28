@@ -9,7 +9,7 @@
 
 $font: 'CustomAndroid', Arial, Calibri, serif;
 $full: 100%;
-$stickcolor: 'rgb(248, 255, 255) 0%, rgb(204, 204, 204) 59%, rgb(155, 176, 181) 100%';
+$stickcolor: unquote('rgb(248, 255, 255) 0%, rgb(204, 204, 204) 59%, rgb(155, 176, 181) 100%');
 
 @mixin stick-background() {
   background: -webkit-linear-gradient(left, $stickcolor);
