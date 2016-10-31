@@ -28,18 +28,21 @@
         return classes[Math.floor(Math.random() * classes.length)];
       };
 
-      var sweet = document.querySelector('#sweet');
-      var circle = document.querySelector('.circle');
+      var figure = document.querySelector('.figure');
+      var Lollipop = document.querySelector('#sweet');
 
-      sweet.classList.add(randomClass());
+      Lollipop.classList.add(randomClass());
 
-      sweet.addEventListener('click', function() {
-        for (var i = 0; i < classes.length; i++) {
-          if (this.classList !== '') this.classList = '';
-          this.classList.add(randomClass());
+      Lollipop.addEventListener('click', function() {
+        if (this.parentElement.getAttribute('data-lollipop') == 'false') {
+          figure.setAttribute('data-lollipop', 'true');
+        } else {
+          for (var i = 0; i < classes.length; i++) {
+            if (this.classList !== '') this.classList = '';
+            this.classList.add(randomClass());
+          }
         }
       }, false);
-
 
     }, false);
   </script>
