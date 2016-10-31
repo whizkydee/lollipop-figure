@@ -8,7 +8,8 @@
 }
 
 $stickcolor: unquote('rgb(248, 255, 255) 0%, rgb(204, 204, 204) 59%, rgb(155, 176, 181) 100%');
-$font: 'CustomAndroid', Arial, Calibri, serif;
+$basefont: 'Source Sans Pro', Calibri, Arial, serif;
+$font: 'CustomAndroid', 'Roboto', Arial, Calibri, serif;
 $full: 100%;
 
 // Sweet Colors
@@ -45,6 +46,7 @@ $lightgreen-circle:   #CBD34C;
 
 * {
   @include browser-prefix(box-sizing, border-box);
+  @include browser-prefix(user-select, 'none');
   &:before,
   &:after {
     @include browser-prefix(box-sizing, border-box);
@@ -57,7 +59,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: $full;
   -ms-text-size-adjust: $full;
-  font-family: $font;
+  font-family: $basefont;
   overflow: hidden;
   font-size: $full;
   height: $full;
@@ -67,8 +69,7 @@ body {
 }
 
 body {
-  background: url('background.jpg') #eeeeee no-repeat;
-  @include browser-prefix(background-size, cover);
+  background: url(image.png) #898989 repeat;
   text-align: center;
   line-height: 1.5;
   margin: 0 auto;
@@ -85,9 +86,29 @@ body {
   text-align: center;
   margin: 200px auto;
   width: 19%;
+  &[data-lollipop="false"] {
+    #sweet {
+      @include browser-prefix(transform, 'scale(.4)');
+    }
+    .stick,
+    .text {
+      visibility: hidden;
+      opacity: 0;
+    }
+  }
+  &[data-lollipop="true"] {
+    #sweet {
+      @include browser-prefix(transform, 'scale(1)');
+    }
+    .stick,
+    .text {
+      visibility: visible;
+      opacity: 1;
+    }
+  }
   #sweet {
     @include browser-prefix(box-shadow, '0px 0px 17px rgba(0, 0, 0, .4)');
-    @include browser-prefix(transition, 'background-color .1s ease');
+    @include browser-prefix(transition, 'background-color .1s linear, transform .3s ease');
     @include browser-prefix(border-radius, $full);
     text-align: center;
     position: relative;
@@ -97,12 +118,17 @@ body {
     height: 180px;
     width: 186px;
     .circle {
+      @include browser-prefix(transition, 'background-color .1s linear');
       @include browser-prefix(border-radius, $full);
       position: absolute;
       height: 85px;
       width: 85px;
       left: 28px;
       top: 23px;
+    }
+    .stick,
+    .text {
+      @include browser-prefix(transition, 'visiblilty, opacity .2s ease .1s');
     }
 
     &.purple {
@@ -150,6 +176,7 @@ body {
     .text {
       @include browser-prefix(transform, 'translate(-50%, -50%)');
       letter-spacing: .05em;
+      font-family: $font;
       position: absolute;
       text-align: center;
       font-weight: bold;
