@@ -46,16 +46,21 @@ body {
   position: relative; }
 
 .figure {
-  position: relative;
-  text-align: center;
-  margin: 200px auto;
-  width: 19%; }
+  -webkit-transform: translate(-50%, 50%);
+  -moz-transform: translate(-50%, 50%);
+  -ms-transform: translate(-50%, 50%);
+  -o-transform: translate(-50%, 50%);
+  transform: translate(-50%, 50%);
+  position: absolute;
+  width: 19%;
+  left: 50%;
+  top: 50%; }
   .figure[data-lollipop="false"] #sweet {
-    -webkit-transform: scale(.4);
-    -moz-transform: scale(.4);
-    -ms-transform: scale(.4);
-    -o-transform: scale(.4);
-    transform: scale(.4); }
+    -webkit-transform: scale(.54);
+    -moz-transform: scale(.54);
+    -ms-transform: scale(.54);
+    -o-transform: scale(.54);
+    transform: scale(.54); }
   .figure[data-lollipop="false"] .stick,
   .figure[data-lollipop="false"] .text {
     visibility: hidden;
@@ -167,9 +172,8 @@ body {
     background: linear-gradient(to right, rgb(248, 255, 255) 0%, rgb(204, 204, 204) 59%, rgb(155, 176, 181) 100%);
     margin: -5px auto 0;
     position: relative;
-    text-align: center;
     height: 250px;
     z-index: -1;
-    width: 18px; }
+    width: 20px; }
 
 /*# sourceMappingURL=style.css.map */
