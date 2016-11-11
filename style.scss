@@ -12,7 +12,7 @@ $basefont: 'Source Sans Pro', Calibri, Arial, serif;
 $font: 'CustomAndroid', 'Roboto', Arial, Calibri, serif;
 $full: 100%;
 
-// Sweet Colors
+// Lollipop Colors
 $purple:              #9C28B1;
 $brown:               #795547;
 $yellow:              #FAE636;
@@ -89,7 +89,7 @@ body {
   top: 50%;
   &[data-lollipop="false"] {
     #sweet {
-      @include browser-prefix(transform, 'scale(.54)');
+      @include browser-prefix(transform, 'scale(.7)');
     }
     .stick,
     .text {
@@ -99,7 +99,7 @@ body {
   }
   &[data-lollipop="true"] {
     #sweet {
-      @include browser-prefix(transform, 'scale(1)');
+      @include browser-prefix(transform, 'scale(1.2)');
     }
     .stick,
     .text {
@@ -194,6 +194,6 @@ body {
     position: relative;
     height: 250px;
     z-index: -1;
-    width: 20px;
+    width: 23px;
   }
 }
