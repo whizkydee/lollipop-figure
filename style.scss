@@ -99,7 +99,7 @@ body {
   }
   &[data-lollipop="true"] {
     #sweet {
-      @include browser-prefix(transform, 'scale(1.2)');
+      @include browser-prefix(transform, 'scale(1.17)');
     }
     .stick,
     .text {

@@ -66,11 +66,11 @@ body {
     visibility: hidden;
     opacity: 0; }
   .figure[data-lollipop="true"] #sweet {
-    -webkit-transform: scale(1.2);
-    -moz-transform: scale(1.2);
-    -ms-transform: scale(1.2);
-    -o-transform: scale(1.2);
-    transform: scale(1.2); }
+    -webkit-transform: scale(1.17);
+    -moz-transform: scale(1.17);
+    -ms-transform: scale(1.17);
+    -o-transform: scale(1.17);
+    transform: scale(1.17); }
   .figure[data-lollipop="true"] .stick,
   .figure[data-lollipop="true"] .text {
     visibility: visible;
