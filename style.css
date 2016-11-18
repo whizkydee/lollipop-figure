@@ -63,7 +63,6 @@ body {
     transform: scale(.7); }
   .figure[data-lollipop="false"] .stick,
   .figure[data-lollipop="false"] .text {
-    visibility: hidden;
     opacity: 0; }
   .figure[data-lollipop="true"] #sweet {
     -webkit-transform: scale(1.15);
@@ -73,7 +72,6 @@ body {
     transform: scale(1.15); }
   .figure[data-lollipop="true"] .stick,
   .figure[data-lollipop="true"] .text {
-    visibility: visible;
     opacity: 1; }
   .figure #sweet {
     -webkit-box-shadow: 0px 0px 17px rgba(0, 0, 0, .4);
@@ -116,11 +114,11 @@ body {
       top: 23px; }
     .figure #sweet .stick,
     .figure #sweet .text {
-      -webkit-transition: visiblilty, opacity .2s ease .1s;
-      -moz-transition: visiblilty, opacity .2s ease .1s;
-      -ms-transition: visiblilty, opacity .2s ease .1s;
-      -o-transition: visiblilty, opacity .2s ease .1s;
-      transition: visiblilty, opacity .2s ease .1s; }
+      -webkit-transition: opacity .2s ease .1s;
+      -moz-transition: opacity .2s ease .1s;
+      -ms-transition: opacity .2s ease .1s;
+      -o-transition: opacity .2s ease .1s;
+      transition: opacity .2s ease .1s; }
     .figure #sweet.purple {
       background-color: #9C28B1; }
       .figure #sweet.purple .circle {

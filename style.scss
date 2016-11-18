@@ -93,7 +93,6 @@ body {
     }
     .stick,
     .text {
-      visibility: hidden;
       opacity: 0;
     }
   }
@@ -103,7 +102,6 @@ body {
     }
     .stick,
     .text {
-      visibility: visible;
       opacity: 1;
     }
   }
@@ -129,7 +127,7 @@ body {
     }
     .stick,
     .text {
-      @include browser-prefix(transition, 'visiblilty, opacity .2s ease .1s');
+      @include browser-prefix(transition, 'opacity .2s ease .1s');
     }
 
     &.purple {
