@@ -35,7 +35,7 @@
       Lollipop.classList.add(randomClass());
 
       Lollipop.addEventListener('click', function() {
-        if (this.parentElement.getAttribute('data-lollipop') == 'false') {
+        if (this.parentElement.getAttribute('data-lollipop') === 'false') {
           figure.setAttribute('data-lollipop', 'true');
         } else {
           for (var i = 0; i < classes.length; i++) {
