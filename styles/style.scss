@@ -96,8 +96,9 @@ body {
   header {
     @include browser-prefix(transform, 'translate(-50%)');
     position: absolute;
-    left: 50%;
+    width: $full;
     top: 100px;
+    left: 50%;
     h1 {
       position: relative;
       margin-bottom: 0;
@@ -222,5 +223,25 @@ body {
     height: 250px;
     z-index: -1;
     width: 23px;
+  }
+}
+
+[data-signature] {
+  position: relative;
+  margin-right: 50px;
+  font-style: italic;
+  float: right;
+  color: #eee;
+  top: 37em;
+  a {
+    border-bottom: 1px dotted #eee;
+    text-decoration: none;
+    color: #eee;
+  }
+  svg {
+    vertical-align: middle;
+    height: 14px;
+    width: 14px;
+    fill: #eee;
   }
 }

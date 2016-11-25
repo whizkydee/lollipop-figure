@@ -60,8 +60,9 @@ body {
     -o-transform: translate(-50%);
     transform: translate(-50%);
     position: absolute;
-    left: 50%;
-    top: 100px; }
+    width: 100%;
+    top: 100px;
+    left: 50%; }
     .demo header h1 {
       position: relative;
       margin-bottom: 0; }
@@ -202,5 +203,22 @@ body {
     height: 250px;
     z-index: -1;
     width: 23px; }
+
+[data-signature] {
+  position: relative;
+  margin-right: 50px;
+  font-style: italic;
+  float: right;
+  color: #eee;
+  top: 37em; }
+  [data-signature] a {
+    border-bottom: 1px dotted #eee;
+    text-decoration: none;
+    color: #eee; }
+  [data-signature] svg {
+    vertical-align: middle;
+    height: 14px;
+    width: 14px;
+    fill: #eee; }
 
 /*# sourceMappingURL=style.css.map */
