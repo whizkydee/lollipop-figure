@@ -1,8 +1,17 @@
 @font-face {
   font-family: 'CustomAndroid';
-  src: url("CustomAndroid.ttf") format("truetype");
+  src: url("../fonts/CustomAndroid.ttf") format("truetype");
   font-weight: normal;
   font-style: normal; }
+@font-face {
+  font-family: 'Not Source Sans Pro';
+  src: url("../fonts/SourceSansPro-Italic.ttf") format("truetype");
+  font-style: italic;
+  font-weight: 400; }
+@font-face {
+  font-family: 'Not Source Sans Pro';
+  src: url("../fonts/SourceSansPro-Bold.ttf") format("truetype");
+  font-weight: 600; }
 * {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -27,7 +36,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
-  font-family: "Source Sans Pro", Calibri, Arial, serif;
+  font-family: "Not Source Sans Pro", Calibri, Arial, serif;
   overflow: hidden;
   font-size: 100%;
   height: 100%;
@@ -36,7 +45,7 @@ body {
   color: #fff; }
 
 body {
-  background: url(image.png) #898989 repeat;
+  background: url(../image.png) #898989 repeat;
   text-align: center;
   line-height: 1.5;
   margin: 0 auto;
@@ -44,15 +53,31 @@ body {
 
 .demo {
   position: relative; }
+  .demo header {
+    -webkit-transform: translate(-50%);
+    -moz-transform: translate(-50%);
+    -ms-transform: translate(-50%);
+    -o-transform: translate(-50%);
+    transform: translate(-50%);
+    position: absolute;
+    left: 50%;
+    top: 100px; }
+    .demo header h1 {
+      position: relative;
+      margin-bottom: 0; }
+    .demo header p {
+      margin-top: 0;
+      color: #eee;
+      font-style: italic; }
 
 .figure {
-  -webkit-transform: translate(-50%, 50%);
-  -moz-transform: translate(-50%, 50%);
-  -ms-transform: translate(-50%, 50%);
-  -o-transform: translate(-50%, 50%);
-  transform: translate(-50%, 50%);
+  -webkit-transform: translate(-50%, 56%);
+  -moz-transform: translate(-50%, 56%);
+  -ms-transform: translate(-50%, 56%);
+  -o-transform: translate(-50%, 56%);
+  transform: translate(-50%, 56%);
   position: absolute;
-  width: 19%;
+  width: 260px;
   left: 50%;
   top: 50%; }
   .figure[data-lollipop="false"] #sweet {
@@ -74,16 +99,16 @@ body {
   .figure[data-lollipop="true"] .text {
     opacity: 1; }
   .figure #sweet {
-    -webkit-box-shadow: 0px 0px 17px rgba(0, 0, 0, .4);
-    -moz-box-shadow: 0px 0px 17px rgba(0, 0, 0, .4);
-    -ms-box-shadow: 0px 0px 17px rgba(0, 0, 0, .4);
-    -o-box-shadow: 0px 0px 17px rgba(0, 0, 0, .4);
-    box-shadow: 0px 0px 17px rgba(0, 0, 0, .4);
     -webkit-transition: background-color .1s linear, transform .3s ease;
     -moz-transition: background-color .1s linear, transform .3s ease;
     -ms-transition: background-color .1s linear, transform .3s ease;
     -o-transition: background-color .1s linear, transform .3s ease;
     transition: background-color .1s linear, transform .3s ease;
+    -webkit-box-shadow: 0px 0px 17px rgba(0, 0, 0, .4);
+    -moz-box-shadow: 0px 0px 17px rgba(0, 0, 0, .4);
+    -ms-box-shadow: 0px 0px 17px rgba(0, 0, 0, .4);
+    -o-box-shadow: 0px 0px 17px rgba(0, 0, 0, .4);
+    box-shadow: 0px 0px 17px rgba(0, 0, 0, .4);
     -webkit-border-radius: 100%;
     -moz-border-radius: 100%;
     -ms-border-radius: 100%;
@@ -112,7 +137,6 @@ body {
       width: 85px;
       left: 28px;
       top: 23px; }
-    .figure #sweet .stick,
     .figure #sweet .text {
       -webkit-transition: opacity .2s ease .1s;
       -moz-transition: opacity .2s ease .1s;
@@ -163,6 +187,11 @@ body {
     -ms-box-shadow: 0px 0px 17px rgba(0, 0, 0, .3);
     -o-box-shadow: 0px 0px 17px rgba(0, 0, 0, .3);
     box-shadow: 0px 0px 17px rgba(0, 0, 0, .3);
+    -webkit-transition: opacity .2s ease .1s;
+    -moz-transition: opacity .2s ease .1s;
+    -ms-transition: opacity .2s ease .1s;
+    -o-transition: opacity .2s ease .1s;
+    transition: opacity .2s ease .1s;
     background: -webkit-linear-gradient(left, rgb(248, 255, 255) 0%, rgb(204, 204, 204) 59%, rgb(155, 176, 181) 100%);
     background: -o-linear-gradient(left, rgb(248, 255, 255) 0%, rgb(204, 204, 204) 59%, rgb(155, 176, 181) 100%);
     background: -ms-linear-gradient(left, rgb(248, 255, 255) 0%, rgb(204, 204, 204) 59%, rgb(155, 176, 181) 100%);

@@ -2,13 +2,27 @@
 
 @font-face {
   font-family: 'CustomAndroid';
-  src: url('CustomAndroid.ttf') format('truetype');
+  src: url('../fonts/CustomAndroid.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
 
+@font-face {
+  font-family: 'Not Source Sans Pro';
+  src: url('../fonts/SourceSansPro-Italic.ttf') format('truetype');
+  font-style: italic;
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'Not Source Sans Pro';
+  src: url('../fonts/SourceSansPro-Bold.ttf') format('truetype');
+  font-weight: 600;
+}
+
+
 $stickcolor: unquote('rgb(248, 255, 255) 0%, rgb(204, 204, 204) 59%, rgb(155, 176, 181) 100%');
-$basefont: 'Source Sans Pro', Calibri, Arial, serif;
+$basefont: 'Not Source Sans Pro', Calibri, Arial, serif;
 $font: 'CustomAndroid', 'Roboto', Arial, Calibri, serif;
 $full: 100%;
 
@@ -69,7 +83,7 @@ body {
 }
 
 body {
-  background: url(image.png) #898989 repeat;
+  background: url(../image.png) #898989 repeat;
   text-align: center;
   line-height: 1.5;
   margin: 0 auto;
@@ -79,12 +93,27 @@ body {
 
 .demo {
   position: relative;
+  header {
+    @include browser-prefix(transform, 'translate(-50%)');
+    position: absolute;
+    left: 50%;
+    top: 100px;
+    h1 {
+      position: relative;
+      margin-bottom: 0;
+    }
+    p {
+      margin-top: 0;
+      color: #eee;
+      font-style: italic;
+    }
+  }
 }
 
 .figure {
-  @include browser-prefix(transform, 'translate(-50%, 50%)');
+  @include browser-prefix(transform, 'translate(-50%, 56%)');
   position: absolute;
-  width: 19%;
+  width: 260px;
   left: 50%;
   top: 50%;
   &[data-lollipop="false"] {
@@ -106,8 +135,8 @@ body {
     }
   }
   #sweet {
-    @include browser-prefix(box-shadow, '0px 0px 17px rgba(0, 0, 0, .4)');
     @include browser-prefix(transition, 'background-color .1s linear, transform .3s ease');
+    @include browser-prefix(box-shadow, '0px 0px 17px rgba(0, 0, 0, .4)');
     @include browser-prefix(border-radius, $full);
     text-align: center;
     position: relative;
@@ -125,7 +154,6 @@ body {
       left: 28px;
       top: 23px;
     }
-    .stick,
     .text {
       @include browser-prefix(transition, 'opacity .2s ease .1s');
     }
@@ -187,6 +215,7 @@ body {
 
   .stick {
     @include browser-prefix(box-shadow, '0px 0px 17px rgba(0, 0, 0, .3)');
+    @include browser-prefix(transition, 'opacity .2s ease .1s');
     @include stick-background;
     margin: -5px auto 0;
     position: relative;
