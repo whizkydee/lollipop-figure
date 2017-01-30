@@ -47,7 +47,7 @@
           figure.setAttribute('data-lollipop', 'true');
         } else {
           for (var i = 0; i < classes.length; i++) {
-            if (this.classList !== '') this.classList = '';
+            if (this.classList.length !== 0) this.classList = '';
             this.classList.add(randomClass());
           }
         }
